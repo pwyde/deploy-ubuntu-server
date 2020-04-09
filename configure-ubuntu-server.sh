@@ -86,7 +86,7 @@ ${white}Options:${no_color}
 
   ${cyan}-n${no_color}, ${cyan}--net-config${no_color}  Specify a specific Netplan configuration file that will be
                     applied on the host.
-" >&2
+" >&1
 }
 
 # Print help if no argument is specified.
@@ -119,7 +119,7 @@ print_msg() {
 }
 
 print_error() {
-    echo -e "$red=> ERROR:$no_color$white" "$@" "$no_color" >&1
+    echo -e "$red=> ERROR:$no_color$white" "$@" "$no_color" >&2
 }
 
 test_run_as_root() {
