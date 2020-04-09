@@ -168,7 +168,7 @@ ${white}Reference:${no_color}
     - https://github.com/zfsonlinux/zfs/wiki/Ubuntu-18.04-Root-on-ZFS
   Script is a re-implementation from the following install script:
     - https://gist.github.com/vrivellino/7dcf150da4cc1d07008315643bfdbfb5
-" >&2
+" >&1
 }
 
 # Print help if no argument is specified.
@@ -201,7 +201,7 @@ print_msg() {
 }
 
 print_error() {
-    echo -e "$red=> ERROR:$no_color$white" "$@" "$no_color" >&1
+    echo -e "$red=> ERROR:$no_color$white" "$@" "$no_color" >&2
 }
 
 test_run_as_root() {
